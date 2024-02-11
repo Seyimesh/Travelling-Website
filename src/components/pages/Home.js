@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../HeroSection";
-import '../../App.css';
-import Cards from "../Cards";
+import "../../App.css";
+import Cards from "../../common/Cards/Cards";
 // import Footer from "../Footer";
 
 function Home() {
@@ -9,10 +9,8 @@ function Home() {
     <>
       <HeroSection />
       <Cards />
-      {/* <Footer /> */}
     </>
-  )
- };
-
+  );
+}
 
 export default Home;
