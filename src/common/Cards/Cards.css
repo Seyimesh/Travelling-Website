@@ -22,13 +22,15 @@ h1 {
 }
 
 .cards__items {
-  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
 }
 
 .cards__item {
   display: flex;
-  flex: 1;
-  margin: 0 1rem;
+  flex: 1 0 calc(25% - 2rem);
+    margin: 1rem 1rem;
   border-radius: 10px;
 }
 
@@ -42,6 +44,7 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .cards__item__pic-wrap {
@@ -90,14 +93,86 @@ h1 {
 }
 
 .cards__item__info {
-  padding: 20px 30px 30px;
+  padding: 20px 10px ;
 }
 
 .cards__item__text {
   color: #252e48;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
 }
+
+.modal__overlay {
+  background: rgba(49,49,49,0.8);
+}
+
+/* Modal container */
+.modal {
+  display: block; 
+  position: fixed; 
+  z-index: 9999; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(5px); 
+}
+
+/* Modal content */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 32px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.modal-img {
+  border-radius: 8px;
+}
+
+.modal_paragraph-text {
+ font-size: 14px;
+
+
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  color: #f21515;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+/* Style the modal content */
+.modal-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content p {
+  margin-bottom: 0;
+}
+
+
+
 
 @media only screen and (min-width: 1200px) {
   .content__blog__container {
@@ -114,5 +189,14 @@ h1 {
 @media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
+    flex: 0 0 100%;
+    margin: 1rem 0;
   }
+
+  /* .cards__item {
+    display: flex;
+    flex: 1 0 calc(25% - 2rem);
+      margin: 1rem 1rem;
+    border-radius: 10px;
+  } */
 }
