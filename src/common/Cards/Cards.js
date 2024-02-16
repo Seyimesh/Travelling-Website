@@ -71,7 +71,7 @@ function Cards() {
               />
             ))}
           </ul>
-          <button className="view_more">View more</button>
+          {/* <button className="view_more">View more</button> */}
         </div>
       </div>
     </div>
